@@ -1,0 +1,112 @@
+<!--
+Simple single-file informational website (HTML).
+How to use:
+- Open this file in a browser to preview (double-click the .html file).
+- Edit the text marked with <!-- EDIT HERE --> to add your real content, logo, and links.
+- To publish for free: push to a GitHub repository and enable GitHub Pages, or drag the file into Netlify/Vercel for easy hosting.
+
+If you want I can customize this page with your logo, color, Mongolian text, and contact info — just paste those here in chat.
+-->
+
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мэдээллийн сайт - Таны нэр</title>
+  <meta name="description" content="Товч танилцуулга — таны мэдээллийн сайт" />
+  <style>
+    :root{--accent:#0f766e;--bg:#f8fafc;--card:#ffffff;--muted:#64748b}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#0f172a;line-height:1.45}
+    .container{max-width:1000px;margin:32px auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;background:linear-gradient(135deg,var(--accent),#34d399);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;margin-top:10px}
+    .card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    h1{font-size:28px;margin:0 0 8px}
+    p.lead{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+    .feature{padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(15,118,110,0.04),transparent)}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+    footer{margin-top:26px;padding:20px 0;color:var(--muted);text-align:center;font-size:14px}
+    @media(max-width:720px){.grid{grid-template-columns:1fr}.logo{width:40px;height:40px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">Т</div>
+        <div>
+          <div style="font-weight:800">Таны байгууллага</div>
+          <div style="font-size:13px;color:var(--muted)">Слоган эсвэл товч тодорхойлолт</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Тухай</a>
+        <a href="#info">Мэдээлэл</a>
+        <a href="#contact">Холбоо</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero card">
+        <div>
+          <h1>Мэдээллийн төв — Таны хамгийн сүүлийн мэдээлэл</h1>
+          <p class="lead">Энд та байгууллагынхаа болон төсөл, үйл ажиллагааны товч танилцуулга, мэдээ, зөвлөмж зэргийг байрлуулна уу.</p>
+          <div style="margin-top:14px">
+            <a class="btn" href="#contact">Холбоо барих</a>
+            <a class="btn" style="background:#e6f6f3;color:var(--accent);margin-left:8px;text-decoration:none;font-weight:700" href="#info">Дэлгэрэнгүй</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="card" style="margin-top:18px">
+        <h2>Бидний тухай</h2>
+        <p style="color:var(--muted)"> <!-- EDIT HERE: Танай байгууллага/хонь/проектын тухай товч танилцуулга байрлуулна -->
+          Манай байгууллага нь ... (энд өөрийн текстээ оруулна уу)
+        </p>
+      </section>
+
+      <section id="info" class="grid" style="margin-top:18px">
+        <div class="card feature">
+          <h3>Сүүлийн мэдээ</h3>
+          <p style="color:var(--muted)">Мэдээ1 — товч агуулга. <!-- EDIT HERE: Мэдээ, нийтлэл, блог гэх мэтийг энд оруулна. --></p>
+          <p style="font-size:13px;color:var(--muted);margin-top:8px">Хугацаа: 2025-10-16</p>
+        </div>
+        <div class="card feature">
+          <h3>Тусламж, үйлчилгээ</h3>
+          <p style="color:var(--muted)">Та манай үйлчилгээний тухай дэлгэрэнгүйг эндээс үзнэ үү. <!-- EDIT HERE: Үйлчилгээний жагсаалт -->
+          </p>
+        </div>
+      </section>
+
+      <section class="card" id="contact" style="margin-top:18px">
+        <h2>Холбоо барих</h2>
+        <p style="color:var(--muted)">Э-мэйл: <a href="mailto:info@example.com">info@example.com</a> | Утас: +976-9999-9999</p>
+        <p style="color:var(--muted)">Хаяг: Хот, гудамж, барилгын нэр</p>
+        <p style="margin-top:12px;color:var(--muted)">Та доорх формыг ашиглан бидэнд хүсэлт илгээнэ үү:</p>
+        <form onsubmit="alert('Форма илгээгдсэн (нэвтрэхгүй). Хэрэв бодит хариу авахыг хүсвэл э-мэйл дээр холбогдоно уу.');return false;">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input placeholder="Таны нэр" required style="flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef2" />
+            <input placeholder="Э-мэйл" type="email" required style="flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef2" />
+          </div>
+          <textarea placeholder="Мессеж" required style="width:100%;margin-top:8px;padding:10px;border-radius:8px;border:1px solid #e6eef2;min-height:100px"></textarea>
+          <div style="margin-top:8px"><button class="btn" type="submit">Илгээх</button></div>
+        </form>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Таны байгууллага — Бүх эрх хуулиар хамгаалагдсан.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
